@@ -12,7 +12,7 @@ async function main() {
   const abi = JSON.parse(await fs.readFile("./abi.json", "utf-8"));
   const contract = new web3.eth.Contract(abi, CONTRACT_ADDRESS);
   let latestCheck = await web3.eth.getBlockNumber()
-  let latestHash = "0x14f91aacbf939dc44ff1cc5a00d02297bedd0e683624870de4b54aa3ce155538"
+  let latestHash = ""
 
   while (true) {
     let currentCheck = await web3.eth.getBlockNumber()
